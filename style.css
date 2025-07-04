@@ -1,0 +1,113 @@
+/* === BASE === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.4) blur(2px);
+  z-index: 0;
+}
+
+/* === CONTAINER === */
+.timer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+/* === TIMER === */
+#timeDisplay,
+#timeInput {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  max-width: 90vw;
+}
+
+#timeInput {
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === BUTTONS === */
+.controls {
+  margin-top: 20px;
+}
+
+.controls button,
+button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin: 8px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover,
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* === SESSION === */
+#sessionCount {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #c1e1ff;
+}
+
+/* === DARK MODE === */
+.dark-mode {
+  background-color: #0b1c2c;
+  background-image: none;
+}
+
+.dark-mode .background-overlay {
+  backdrop-filter: brightness(0.2);
+}
+
+/* === QUOTE / EXTRAS === */
+p {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  max-width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  #timeDisplay, #timeInput {
+    font-size: 3.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
